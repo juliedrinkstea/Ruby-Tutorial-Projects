@@ -1,9 +1,10 @@
 #Trevor's 3rd challenge, make a palindrome checker.
 #Approach: Using .reverse is probably easiest, but I'll need to convert a string to an array to use it
+#2nd commit: Changed line 6 to have more robust sanitization
 
 puts "Was it a car or a cat I saw? Give me a word or phrase and I'll tell you if it is a palindrome."
 
-input = gets.chomp.downcase
+input = gets.delete("^a-zA-Z0-9").downcase
 arr_input = input.chars.to_a
 rev_input = arr_input.reverse
 
